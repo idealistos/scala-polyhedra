@@ -1,0 +1,1869 @@
+package main.poly
+
+import main.value.Value
+import main.poly.Implicits._
+
+// 3 angles
+
+case class UniformPolyAB32(dA: Value, dB: Value) extends Poly() {
+    // A(a1a1)B(a1b1)B(b1a1)
+    case class FaceA() extends Polygon(3) {
+        val edgeA = Edge(dA)
+        edgeA.vertex matches edgeA.vertex
+    }
+    case class FaceB() extends Polygon(4) {
+        val edgeA = Edge(dA)
+        val edgeB = Edge(dB)
+        edgeA.vertex matches edgeB.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.edgeA matches faceB.edgeA
+    faceB.edgeB matches faceB.edgeB
+    (3 faces) at faceA.edgeA.vertex
+}
+
+case class UniformPolyAB33(dA: Value, dB: Value) extends Poly() {
+    // A(a1a1)B(a1b1)B(b1a1)
+    case class FaceA() extends Polygon(3) {
+        val edgeA = Edge(dA)
+        edgeA.vertex matches edgeA.vertex
+    }
+    case class FaceB() extends Polygon(6) {
+        val edgeA = Edge(dA)
+        val edgeB = Edge(dB)
+        edgeA.vertex matches edgeB.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.edgeA matches faceB.edgeA
+    faceB.edgeB matches faceB.edgeB
+    (3 faces) at faceA.edgeA.vertex
+}
+
+case class UniformPolyAB34(dA: Value, dB: Value) extends Poly() {
+    // A(a1a1)B(a1b1)B(b1a1)
+    case class FaceA() extends Polygon(3) {
+        val edgeA = Edge(dA)
+        edgeA.vertex matches edgeA.vertex
+    }
+    case class FaceB() extends Polygon(8) {
+        val edgeA = Edge(dA)
+        val edgeB = Edge(dB)
+        edgeA.vertex matches edgeB.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.edgeA matches faceB.edgeA
+    faceB.edgeB matches faceB.edgeB
+    (3 faces) at faceA.edgeA.vertex
+}
+
+case class UniformPolyAB35(dA: Value, dB: Value) extends Poly() {
+    // A(a1a1)B(a1b1)B(b1a1)
+    case class FaceA() extends Polygon(3) {
+        val edgeA = Edge(dA)
+        edgeA.vertex matches edgeA.vertex
+    }
+    case class FaceB() extends Polygon(10) {
+        val edgeA = Edge(dA)
+        val edgeB = Edge(dB)
+        edgeA.vertex matches edgeB.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.edgeA matches faceB.edgeA
+    faceB.edgeB matches faceB.edgeB
+    (3 faces) at faceA.edgeA.vertex
+}
+
+case class UniformTilingAB36(dA: Value, dB: Value) extends Poly() {
+    // A(a1a1)B(a1b1)B(b1a1)
+    case class FaceA() extends Polygon(3) {
+        val edgeA = Edge(dA)
+        edgeA.vertex matches edgeA.vertex
+    }
+    case class FaceB() extends Polygon(12) {
+        val edgeA = Edge(dA)
+        val edgeB = Edge(dB)
+        edgeA.vertex matches edgeB.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.edgeA matches faceB.edgeA
+    faceB.edgeB matches faceB.edgeB
+    (3 faces) at faceA.edgeA.vertex
+}
+
+case class UniformPolyAB42(dA: Value, dB: Value) extends Poly() {
+    // A(a1a1)B(a1b1)B(b1a1)
+    case class FaceA() extends Polygon(4) {
+        val edgeA = Edge(dA)
+        edgeA.vertex matches edgeA.vertex
+    }
+    case class FaceB() extends Polygon(4) {
+        val edgeA = Edge(dA)
+        val edgeB = Edge(dB)
+        edgeA.vertex matches edgeB.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.edgeA matches faceB.edgeA
+    faceB.edgeB matches faceB.edgeB
+    (3 faces) at faceA.edgeA.vertex
+}
+
+case class UniformPolyAB43(dA: Value, dB: Value) extends Poly() {
+    // A(a1a1)B(a1b1)B(b1a1)
+    case class FaceA() extends Polygon(4) {
+        val edgeA = Edge(dA)
+        edgeA.vertex matches edgeA.vertex
+    }
+    case class FaceB() extends Polygon(6) {
+        val edgeA = Edge(dA)
+        val edgeB = Edge(dB)
+        edgeA.vertex matches edgeB.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.edgeA matches faceB.edgeA
+    faceB.edgeB matches faceB.edgeB
+    (3 faces) at faceA.edgeA.vertex
+}
+
+case class UniformTilingAB44(dA: Value, dB: Value) extends Poly() {
+    // A(a1a1)B(a1b1)B(b1a1)
+    case class FaceA() extends Polygon(4) {
+        val edgeA = Edge(dA)
+        edgeA.vertex matches edgeA.vertex
+    }
+    case class FaceB() extends Polygon(8) {
+        val edgeA = Edge(dA)
+        val edgeB = Edge(dB)
+        edgeA.vertex matches edgeB.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.edgeA matches faceB.edgeA
+    faceB.edgeB matches faceB.edgeB
+    (3 faces) at faceA.edgeA.vertex
+}
+
+case class UniformPolyAB52(dA: Value, dB: Value) extends Poly() {
+    // A(a1a1)B(a1b1)B(b1a1)
+    case class FaceA() extends Polygon(5) {
+        val edgeA = Edge(dA)
+        edgeA.vertex matches edgeA.vertex
+    }
+    case class FaceB() extends Polygon(4) {
+        val edgeA = Edge(dA)
+        val edgeB = Edge(dB)
+        edgeA.vertex matches edgeB.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.edgeA matches faceB.edgeA
+    faceB.edgeB matches faceB.edgeB
+    (3 faces) at faceA.edgeA.vertex
+}
+
+case class UniformPolyAB53(dA: Value, dB: Value) extends Poly() {
+    // A(a1a1)B(a1b1)B(b1a1)
+    case class FaceA() extends Polygon(5) {
+        val edgeA = Edge(dA)
+        edgeA.vertex matches edgeA.vertex
+    }
+    case class FaceB() extends Polygon(6) {
+        val edgeA = Edge(dA)
+        val edgeB = Edge(dB)
+        edgeA.vertex matches edgeB.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.edgeA matches faceB.edgeA
+    faceB.edgeB matches faceB.edgeB
+    (3 faces) at faceA.edgeA.vertex
+}
+
+case class UniformPolyAB62(dA: Value, dB: Value) extends Poly() {
+    // A(a1a1)B(a1b1)B(b1a1)
+    case class FaceA() extends Polygon(6) {
+        val edgeA = Edge(dA)
+        edgeA.vertex matches edgeA.vertex
+    }
+    case class FaceB() extends Polygon(4) {
+        val edgeA = Edge(dA)
+        val edgeB = Edge(dB)
+        edgeA.vertex matches edgeB.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.edgeA matches faceB.edgeA
+    faceB.edgeB matches faceB.edgeB
+    (3 faces) at faceA.edgeA.vertex
+}
+
+case class UniformTilingAB63(dA: Value, dB: Value) extends Poly() {
+    // A(a1a1)B(a1b1)B(b1a1)
+    case class FaceA() extends Polygon(6) {
+        val edgeA = Edge(dA)
+        edgeA.vertex matches edgeA.vertex
+    }
+    case class FaceB() extends Polygon(6) {
+        val edgeA = Edge(dA)
+        val edgeB = Edge(dB)
+        edgeA.vertex matches edgeB.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.edgeA matches faceB.edgeA
+    faceB.edgeB matches faceB.edgeB
+    (3 faces) at faceA.edgeA.vertex
+}
+
+case class UniformPolyAB72(dA: Value, dB: Value) extends Poly() {
+    // A(a1a1)B(a1b1)B(b1a1)
+    case class FaceA() extends Polygon(7) {
+        val edgeA = Edge(dA)
+        edgeA.vertex matches edgeA.vertex
+    }
+    case class FaceB() extends Polygon(4) {
+        val edgeA = Edge(dA)
+        val edgeB = Edge(dB)
+        edgeA.vertex matches edgeB.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.edgeA matches faceB.edgeA
+    faceB.edgeB matches faceB.edgeB
+    (3 faces) at faceA.edgeA.vertex
+}
+
+case class UniformPolyAB82(dA: Value, dB: Value) extends Poly() {
+    // A(a1a1)B(a1b1)B(b1a1)
+    case class FaceA() extends Polygon(8) {
+        val edgeA = Edge(dA)
+        edgeA.vertex matches edgeA.vertex
+    }
+    case class FaceB() extends Polygon(4) {
+        val edgeA = Edge(dA)
+        val edgeB = Edge(dB)
+        edgeA.vertex matches edgeB.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.edgeA matches faceB.edgeA
+    faceB.edgeB matches faceB.edgeB
+    (3 faces) at faceA.edgeA.vertex
+}
+
+case class UniformPolyAC1(dA: Value, dB: Value) extends Poly() {
+    // A(a1a1)A(a2b1)A(b1a2)
+    case class FaceA() extends Polygon(3) {
+        val sideA = Side(dA)
+        val edgeB = Edge(dB)
+        sideA.vertex2 matches edgeB.vertex
+        sideA.vertex1 matches sideA.vertex1
+    }
+    val faceA = new FaceA()
+    faceA.sideA opposes faceA.sideA
+    faceA.edgeB matches faceA.edgeB
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformTilingAC1X2(dA: Value, dB: Value) extends Poly() {
+    // A(a1a1)A(a2b1)A(b1a2)
+    case class FaceA() extends Polygon(3) {
+        val sideA = Side(dA)
+        val edgeB = Edge(dB)
+        sideA.vertex2 matches edgeB.vertex
+        sideA.vertex1 matches sideA.vertex1
+    }
+    val faceA = new FaceA()
+    faceA.sideA opposes faceA.sideA
+    faceA.edgeB matches faceA.edgeB
+    (6 faces) at faceA.sideA.vertex1
+}
+
+case class UniformTilingAC2(dA: Value, dB: Value, cFaceA1: Value) extends Poly() {
+    // A(a1a1)A(a2b1)A(b1a2)
+    case class FaceA() extends Polygon(6) {
+        val sideA = Side(dA)
+        val edgeB = Edge(dB)
+        sideA.vertex2 matches edgeB.vertex
+        (sideA.vertex1 matches sideA.vertex1) -> cFaceA1
+    }
+    val faceA = new FaceA()
+    faceA.sideA opposes faceA.sideA
+    faceA.edgeB matches faceA.edgeB
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyAD31(dA: Value, dB: Value) extends Poly() {
+    // A(a1a2)B(a1b1)B(b3a2)
+    case class FaceA() extends Polygon(3) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB() extends Polygon(4) {
+        val sideA = Side(dA)
+        val edgeB3 = Edge(dB)
+        val edgeB = Edge(dB)
+        sideA.vertex1 matches edgeB.vertex
+        sideA.vertex2 matches edgeB3.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.sideA opposes faceB.sideA
+    faceB.edgeB matches faceB.edgeB3
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyAD32(dA: Value, dB: Value) extends Poly() {
+    // A(a1a2)B(a1b1)B(b3a2)
+    case class FaceA() extends Polygon(3) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB(cFaceB1: Value) extends Polygon(8) {
+        val sideA = Side(dA)
+        val edgeB3 = Edge(dB)
+        val edgeB = Edge(dB)
+        (sideA.vertex1 matches edgeB.vertex) -> cFaceB1
+        sideA.vertex2 matches edgeB3.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB(x(0))
+    faceA.sideA opposes faceB.sideA
+    faceB.edgeB matches faceB.edgeB3
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformTilingAD33(dA: Value, dB: Value, cFaceB1: Value) extends Poly() {
+    // A(a1a2)B(a1b1)B(b3a2)
+    case class FaceA() extends Polygon(3) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB() extends Polygon(12) {
+        val sideA = Side(dA)
+        val edgeB3 = Edge(dB)
+        val edgeB = Edge(dB)
+        (sideA.vertex1 matches edgeB.vertex) -> cFaceB1
+        sideA.vertex2 matches edgeB3.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.sideA opposes faceB.sideA
+    faceB.edgeB matches faceB.edgeB3
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyAD41(dA: Value, dB: Value) extends Poly() {
+    // A(a1a2)B(a1b1)B(b3a2)
+    case class FaceA() extends Polygon(4) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB() extends Polygon(4) {
+        val sideA = Side(dA)
+        val edgeB3 = Edge(dB)
+        val edgeB = Edge(dB)
+        sideA.vertex1 matches edgeB.vertex
+        sideA.vertex2 matches edgeB3.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.sideA opposes faceB.sideA
+    faceB.edgeB matches faceB.edgeB3
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformTilingAD42(dA: Value, dB: Value, cFaceB1: Value) extends Poly() {
+    // A(a1a2)B(a1b1)B(b3a2)
+    case class FaceA() extends Polygon(4) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB() extends Polygon(8) {
+        val sideA = Side(dA)
+        val edgeB3 = Edge(dB)
+        val edgeB = Edge(dB)
+        (sideA.vertex1 matches edgeB.vertex) -> cFaceB1
+        sideA.vertex2 matches edgeB3.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.sideA opposes faceB.sideA
+    faceB.edgeB matches faceB.edgeB3
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyAD51(dA: Value, dB: Value) extends Poly() {
+    // A(a1a2)B(a1b1)B(b3a2)
+    case class FaceA() extends Polygon(5) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB() extends Polygon(4) {
+        val sideA = Side(dA)
+        val edgeB3 = Edge(dB)
+        val edgeB = Edge(dB)
+        sideA.vertex1 matches edgeB.vertex
+        sideA.vertex2 matches edgeB3.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.sideA opposes faceB.sideA
+    faceB.edgeB matches faceB.edgeB3
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyAD61(dA: Value, dB: Value) extends Poly() {
+    // A(a1a2)B(a1b1)B(b3a2)
+    case class FaceA() extends Polygon(6) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB() extends Polygon(4) {
+        val sideA = Side(dA)
+        val edgeB3 = Edge(dB)
+        val edgeB = Edge(dB)
+        sideA.vertex1 matches edgeB.vertex
+        sideA.vertex2 matches edgeB3.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.sideA opposes faceB.sideA
+    faceB.edgeB matches faceB.edgeB3
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyAD71(dA: Value, dB: Value) extends Poly() {
+    // A(a1a2)B(a1b1)B(b3a2)
+    case class FaceA() extends Polygon(7) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB() extends Polygon(4) {
+        val sideA = Side(dA)
+        val edgeB3 = Edge(dB)
+        val edgeB = Edge(dB)
+        sideA.vertex1 matches edgeB.vertex
+        sideA.vertex2 matches edgeB3.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.sideA opposes faceB.sideA
+    faceB.edgeB matches faceB.edgeB3
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyAD81(dA: Value, dB: Value) extends Poly() {
+    // A(a1a2)B(a1b1)B(b3a2)
+    case class FaceA() extends Polygon(8) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB() extends Polygon(4) {
+        val sideA = Side(dA)
+        val edgeB3 = Edge(dB)
+        val edgeB = Edge(dB)
+        sideA.vertex1 matches edgeB.vertex
+        sideA.vertex2 matches edgeB3.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.sideA opposes faceB.sideA
+    faceB.edgeB matches faceB.edgeB3
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyCD32(dA: Value, dB: Value) extends Poly() {
+    // A(a1a2)B(a1b1)B(b2a2)
+    case class FaceA() extends Polygon(3) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB(cFaceB1: Value) extends Polygon(4) {
+        val sideA = Side(dA)
+        val sideB = Side(dB)
+        sideA.vertex2 matches sideB.vertex2
+        (sideA.vertex1 matches sideB.vertex1) -> cFaceB1
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB(x(0))
+    faceA.sideA opposes faceB.sideA
+    faceB.sideB opposes faceB.sideB
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyCD33(dA: Value, dB: Value) extends Poly() {
+    // A(a1a2)B(a1b1)B(b2a2)
+    case class FaceA() extends Polygon(3) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB(cFaceB1: Value) extends Polygon(6) {
+        val sideA = Side(dA)
+        val sideB = Side(dB)
+        sideA.vertex2 matches sideB.vertex2
+        (sideA.vertex1 matches sideB.vertex1) -> cFaceB1
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB(x(0))
+    faceA.sideA opposes faceB.sideA
+    faceB.sideB opposes faceB.sideB
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyCD34(dA: Value, dB: Value) extends Poly() {
+    // A(a1a2)B(a1b1)B(b2a2)
+    case class FaceA() extends Polygon(3) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB(cFaceB1: Value) extends Polygon(8) {
+        val sideA = Side(dA)
+        val sideB = Side(dB)
+        sideA.vertex2 matches sideB.vertex2
+        (sideA.vertex1 matches sideB.vertex1) -> cFaceB1
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB(x(0))
+    faceA.sideA opposes faceB.sideA
+    faceB.sideB opposes faceB.sideB
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyCD35(dA: Value, dB: Value) extends Poly() {
+    // A(a1a2)B(a1b1)B(b2a2)
+    case class FaceA() extends Polygon(3) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB(cFaceB1: Value) extends Polygon(10) {
+        val sideA = Side(dA)
+        val sideB = Side(dB)
+        sideA.vertex2 matches sideB.vertex2
+        (sideA.vertex1 matches sideB.vertex1) -> cFaceB1
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB(x(0))
+    faceA.sideA opposes faceB.sideA
+    faceB.sideB opposes faceB.sideB
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformTilingCD36(dA: Value, dB: Value, cFaceB1: Value) extends Poly() {
+    // A(a1a2)B(a1b1)B(b2a2)
+    case class FaceA() extends Polygon(3) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB() extends Polygon(12) {
+        val sideA = Side(dA)
+        val sideB = Side(dB)
+        sideA.vertex2 matches sideB.vertex2
+        (sideA.vertex1 matches sideB.vertex1) -> cFaceB1
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.sideA opposes faceB.sideA
+    faceB.sideB opposes faceB.sideB
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyCD42(dA: Value, dB: Value) extends Poly() {
+    // A(a1a2)B(a1b1)B(b2a2)
+    case class FaceA() extends Polygon(4) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB(cFaceB1: Value) extends Polygon(4) {
+        val sideA = Side(dA)
+        val sideB = Side(dB)
+        sideA.vertex2 matches sideB.vertex2
+        (sideA.vertex1 matches sideB.vertex1) -> cFaceB1
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB(x(0))
+    faceA.sideA opposes faceB.sideA
+    faceB.sideB opposes faceB.sideB
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyCD43(dA: Value, dB: Value) extends Poly() {
+    // A(a1a2)B(a1b1)B(b2a2)
+    case class FaceA() extends Polygon(4) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB(cFaceB1: Value) extends Polygon(6) {
+        val sideA = Side(dA)
+        val sideB = Side(dB)
+        sideA.vertex2 matches sideB.vertex2
+        (sideA.vertex1 matches sideB.vertex1) -> cFaceB1
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB(x(0))
+    faceA.sideA opposes faceB.sideA
+    faceB.sideB opposes faceB.sideB
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformTilingCD44(dA: Value, dB: Value, cFaceB1: Value) extends Poly() {
+    // A(a1a2)B(a1b1)B(b2a2)
+    case class FaceA() extends Polygon(4) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB() extends Polygon(8) {
+        val sideA = Side(dA)
+        val sideB = Side(dB)
+        sideA.vertex2 matches sideB.vertex2
+        (sideA.vertex1 matches sideB.vertex1) -> cFaceB1
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.sideA opposes faceB.sideA
+    faceB.sideB opposes faceB.sideB
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyCD52(dA: Value, dB: Value) extends Poly() {
+    // A(a1a2)B(a1b1)B(b2a2)
+    case class FaceA() extends Polygon(5) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB(cFaceB1: Value) extends Polygon(4) {
+        val sideA = Side(dA)
+        val sideB = Side(dB)
+        sideA.vertex2 matches sideB.vertex2
+        (sideA.vertex1 matches sideB.vertex1) -> cFaceB1
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB(x(0))
+    faceA.sideA opposes faceB.sideA
+    faceB.sideB opposes faceB.sideB
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyCD53(dA: Value, dB: Value) extends Poly() {
+    // A(a1a2)B(a1b1)B(b2a2)
+    case class FaceA() extends Polygon(5) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB(cFaceB1: Value) extends Polygon(6) {
+        val sideA = Side(dA)
+        val sideB = Side(dB)
+        sideA.vertex2 matches sideB.vertex2
+        (sideA.vertex1 matches sideB.vertex1) -> cFaceB1
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB(x(0))
+    faceA.sideA opposes faceB.sideA
+    faceB.sideB opposes faceB.sideB
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyCD62(dA: Value, dB: Value) extends Poly() {
+    // A(a1a2)B(a1b1)B(b2a2)
+    case class FaceA() extends Polygon(6) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB(cFaceB1: Value) extends Polygon(4) {
+        val sideA = Side(dA)
+        val sideB = Side(dB)
+        sideA.vertex2 matches sideB.vertex2
+        (sideA.vertex1 matches sideB.vertex1) -> cFaceB1
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB(x(0))
+    faceA.sideA opposes faceB.sideA
+    faceB.sideB opposes faceB.sideB
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformTilingCD63(dA: Value, dB: Value, cFaceB1: Value) extends Poly() {
+    // A(a1a2)B(a1b1)B(b2a2)
+    case class FaceA() extends Polygon(6) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB() extends Polygon(6) {
+        val sideA = Side(dA)
+        val sideB = Side(dB)
+        sideA.vertex2 matches sideB.vertex2
+        (sideA.vertex1 matches sideB.vertex1) -> cFaceB1
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.sideA opposes faceB.sideA
+    faceB.sideB opposes faceB.sideB
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyCD72(dA: Value, dB: Value) extends Poly() {
+    // A(a1a2)B(a1b1)B(b2a2)
+    case class FaceA() extends Polygon(7) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB(cFaceB1: Value) extends Polygon(4) {
+        val sideA = Side(dA)
+        val sideB = Side(dB)
+        sideA.vertex2 matches sideB.vertex2
+        (sideA.vertex1 matches sideB.vertex1) -> cFaceB1
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB(x(0))
+    faceA.sideA opposes faceB.sideA
+    faceB.sideB opposes faceB.sideB
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyCD82(dA: Value, dB: Value) extends Poly() {
+    // A(a1a2)B(a1b1)B(b2a2)
+    case class FaceA() extends Polygon(8) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB(cFaceB1: Value) extends Polygon(4) {
+        val sideA = Side(dA)
+        val sideB = Side(dB)
+        sideA.vertex2 matches sideB.vertex2
+        (sideA.vertex1 matches sideB.vertex1) -> cFaceB1
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB(x(0))
+    faceA.sideA opposes faceB.sideA
+    faceB.sideB opposes faceB.sideB
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyAF31(dA: Value, dB: Value) extends Poly() {
+    // A(a1a2)B(a2b1)B(b3a1)
+    case class FaceA() extends Polygon(3) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB() extends Polygon(4) {
+        val sideA = Side(dA)
+        val edgeB3 = Edge(dB)
+        val edgeB = Edge(dB)
+        sideA.vertex2 matches edgeB.vertex
+        sideA.vertex1 matches edgeB3.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.sideA matches faceB.sideA
+    faceB.edgeB matches faceB.edgeB3
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyAF32(dA: Value, dB: Value) extends Poly() {
+    // A(a1a2)B(a2b1)B(b3a1)
+    case class FaceA() extends Polygon(3) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB(cFaceB1: Value) extends Polygon(8) {
+        val sideA = Side(dA)
+        val edgeB3 = Edge(dB)
+        val edgeB = Edge(dB)
+        (sideA.vertex2 matches edgeB.vertex) -> cFaceB1
+        sideA.vertex1 matches edgeB3.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB(x(0))
+    faceA.sideA matches faceB.sideA
+    faceB.edgeB matches faceB.edgeB3
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformTilingAF33(dA: Value, dB: Value, cFaceB1: Value) extends Poly() {
+    // A(a1a2)B(a2b1)B(b3a1)
+    case class FaceA() extends Polygon(3) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB() extends Polygon(12) {
+        val sideA = Side(dA)
+        val edgeB3 = Edge(dB)
+        val edgeB = Edge(dB)
+        (sideA.vertex2 matches edgeB.vertex) -> cFaceB1
+        sideA.vertex1 matches edgeB3.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.sideA matches faceB.sideA
+    faceB.edgeB matches faceB.edgeB3
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyAF41(dA: Value, dB: Value) extends Poly() {
+    // A(a1a2)B(a2b1)B(b3a1)
+    case class FaceA() extends Polygon(4) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB() extends Polygon(4) {
+        val sideA = Side(dA)
+        val edgeB3 = Edge(dB)
+        val edgeB = Edge(dB)
+        sideA.vertex2 matches edgeB.vertex
+        sideA.vertex1 matches edgeB3.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.sideA matches faceB.sideA
+    faceB.edgeB matches faceB.edgeB3
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformTilingAF42(dA: Value, dB: Value, cFaceB1: Value) extends Poly() {
+    // A(a1a2)B(a2b1)B(b3a1)
+    case class FaceA() extends Polygon(4) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB() extends Polygon(8) {
+        val sideA = Side(dA)
+        val edgeB3 = Edge(dB)
+        val edgeB = Edge(dB)
+        (sideA.vertex2 matches edgeB.vertex) -> cFaceB1
+        sideA.vertex1 matches edgeB3.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.sideA matches faceB.sideA
+    faceB.edgeB matches faceB.edgeB3
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyAF51(dA: Value, dB: Value) extends Poly() {
+    // A(a1a2)B(a2b1)B(b3a1)
+    case class FaceA() extends Polygon(5) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB() extends Polygon(4) {
+        val sideA = Side(dA)
+        val edgeB3 = Edge(dB)
+        val edgeB = Edge(dB)
+        sideA.vertex2 matches edgeB.vertex
+        sideA.vertex1 matches edgeB3.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.sideA matches faceB.sideA
+    faceB.edgeB matches faceB.edgeB3
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyAF61(dA: Value, dB: Value) extends Poly() {
+    // A(a1a2)B(a2b1)B(b3a1)
+    case class FaceA() extends Polygon(6) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB() extends Polygon(4) {
+        val sideA = Side(dA)
+        val edgeB3 = Edge(dB)
+        val edgeB = Edge(dB)
+        sideA.vertex2 matches edgeB.vertex
+        sideA.vertex1 matches edgeB3.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.sideA matches faceB.sideA
+    faceB.edgeB matches faceB.edgeB3
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyAF71(dA: Value, dB: Value) extends Poly() {
+    // A(a1a2)B(a2b1)B(b3a1)
+    case class FaceA() extends Polygon(7) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB() extends Polygon(4) {
+        val sideA = Side(dA)
+        val edgeB3 = Edge(dB)
+        val edgeB = Edge(dB)
+        sideA.vertex2 matches edgeB.vertex
+        sideA.vertex1 matches edgeB3.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.sideA matches faceB.sideA
+    faceB.edgeB matches faceB.edgeB3
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyAF81(dA: Value, dB: Value) extends Poly() {
+    // A(a1a2)B(a2b1)B(b3a1)
+    case class FaceA() extends Polygon(8) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB() extends Polygon(4) {
+        val sideA = Side(dA)
+        val edgeB3 = Edge(dB)
+        val edgeB = Edge(dB)
+        sideA.vertex2 matches edgeB.vertex
+        sideA.vertex1 matches edgeB3.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.sideA matches faceB.sideA
+    faceB.edgeB matches faceB.edgeB3
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyCF32(dA: Value, dB: Value) extends Poly() {
+    // A(a1a2)B(a2b1)B(b2a1)
+    case class FaceA() extends Polygon(3) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB(cFaceB1: Value) extends Polygon(4) {
+        val sideA = Side(dA)
+        val sideB = Side(dB)
+        sideA.vertex1 matches sideB.vertex2
+        (sideA.vertex2 matches sideB.vertex1) -> cFaceB1
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB(x(0))
+    faceA.sideA matches faceB.sideA
+    faceB.sideB opposes faceB.sideB
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyCF33(dA: Value, dB: Value) extends Poly() {
+    // A(a1a2)B(a2b1)B(b2a1)
+    case class FaceA() extends Polygon(3) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB(cFaceB1: Value) extends Polygon(6) {
+        val sideA = Side(dA)
+        val sideB = Side(dB)
+        sideA.vertex1 matches sideB.vertex2
+        (sideA.vertex2 matches sideB.vertex1) -> cFaceB1
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB(x(0))
+    faceA.sideA matches faceB.sideA
+    faceB.sideB opposes faceB.sideB
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyCF34(dA: Value, dB: Value) extends Poly() {
+    // A(a1a2)B(a2b1)B(b2a1)
+    case class FaceA() extends Polygon(3) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB(cFaceB1: Value) extends Polygon(8) {
+        val sideA = Side(dA)
+        val sideB = Side(dB)
+        sideA.vertex1 matches sideB.vertex2
+        (sideA.vertex2 matches sideB.vertex1) -> cFaceB1
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB(x(0))
+    faceA.sideA matches faceB.sideA
+    faceB.sideB opposes faceB.sideB
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyCF35(dA: Value, dB: Value) extends Poly() {
+    // A(a1a2)B(a2b1)B(b2a1)
+    case class FaceA() extends Polygon(3) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB(cFaceB1: Value) extends Polygon(10) {
+        val sideA = Side(dA)
+        val sideB = Side(dB)
+        sideA.vertex1 matches sideB.vertex2
+        (sideA.vertex2 matches sideB.vertex1) -> cFaceB1
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB(x(0))
+    faceA.sideA matches faceB.sideA
+    faceB.sideB opposes faceB.sideB
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformTilingCF36(dA: Value, dB: Value, cFaceB1: Value) extends Poly() {
+    // A(a1a2)B(a2b1)B(b2a1)
+    case class FaceA() extends Polygon(3) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB() extends Polygon(12) {
+        val sideA = Side(dA)
+        val sideB = Side(dB)
+        sideA.vertex1 matches sideB.vertex2
+        (sideA.vertex2 matches sideB.vertex1) -> cFaceB1
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.sideA matches faceB.sideA
+    faceB.sideB opposes faceB.sideB
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyCF42(dA: Value, dB: Value) extends Poly() {
+    // A(a1a2)B(a2b1)B(b2a1)
+    case class FaceA() extends Polygon(4) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB(cFaceB1: Value) extends Polygon(4) {
+        val sideA = Side(dA)
+        val sideB = Side(dB)
+        sideA.vertex1 matches sideB.vertex2
+        (sideA.vertex2 matches sideB.vertex1) -> cFaceB1
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB(x(0))
+    faceA.sideA matches faceB.sideA
+    faceB.sideB opposes faceB.sideB
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyCF43(dA: Value, dB: Value) extends Poly() {
+    // A(a1a2)B(a2b1)B(b2a1)
+    case class FaceA() extends Polygon(4) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB(cFaceB1: Value) extends Polygon(6) {
+        val sideA = Side(dA)
+        val sideB = Side(dB)
+        sideA.vertex1 matches sideB.vertex2
+        (sideA.vertex2 matches sideB.vertex1) -> cFaceB1
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB(x(0))
+    faceA.sideA matches faceB.sideA
+    faceB.sideB opposes faceB.sideB
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformTilingCF44(dA: Value, dB: Value, cFaceB1: Value) extends Poly() {
+    // A(a1a2)B(a2b1)B(b2a1)
+    case class FaceA() extends Polygon(4) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB() extends Polygon(8) {
+        val sideA = Side(dA)
+        val sideB = Side(dB)
+        sideA.vertex1 matches sideB.vertex2
+        (sideA.vertex2 matches sideB.vertex1) -> cFaceB1
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.sideA matches faceB.sideA
+    faceB.sideB opposes faceB.sideB
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyCF52(dA: Value, dB: Value) extends Poly() {
+    // A(a1a2)B(a2b1)B(b2a1)
+    case class FaceA() extends Polygon(5) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB(cFaceB1: Value) extends Polygon(4) {
+        val sideA = Side(dA)
+        val sideB = Side(dB)
+        sideA.vertex1 matches sideB.vertex2
+        (sideA.vertex2 matches sideB.vertex1) -> cFaceB1
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB(x(0))
+    faceA.sideA matches faceB.sideA
+    faceB.sideB opposes faceB.sideB
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyCF53(dA: Value, dB: Value) extends Poly() {
+    // A(a1a2)B(a2b1)B(b2a1)
+    case class FaceA() extends Polygon(5) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB(cFaceB1: Value) extends Polygon(6) {
+        val sideA = Side(dA)
+        val sideB = Side(dB)
+        sideA.vertex1 matches sideB.vertex2
+        (sideA.vertex2 matches sideB.vertex1) -> cFaceB1
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB(x(0))
+    faceA.sideA matches faceB.sideA
+    faceB.sideB opposes faceB.sideB
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyCF62(dA: Value, dB: Value) extends Poly() {
+    // A(a1a2)B(a2b1)B(b2a1)
+    case class FaceA() extends Polygon(6) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB(cFaceB1: Value) extends Polygon(4) {
+        val sideA = Side(dA)
+        val sideB = Side(dB)
+        sideA.vertex1 matches sideB.vertex2
+        (sideA.vertex2 matches sideB.vertex1) -> cFaceB1
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB(x(0))
+    faceA.sideA matches faceB.sideA
+    faceB.sideB opposes faceB.sideB
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformTilingCF63(dA: Value, dB: Value, cFaceB1: Value) extends Poly() {
+    // A(a1a2)B(a2b1)B(b2a1)
+    case class FaceA() extends Polygon(6) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB() extends Polygon(6) {
+        val sideA = Side(dA)
+        val sideB = Side(dB)
+        sideA.vertex1 matches sideB.vertex2
+        (sideA.vertex2 matches sideB.vertex1) -> cFaceB1
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.sideA matches faceB.sideA
+    faceB.sideB opposes faceB.sideB
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyCF72(dA: Value, dB: Value) extends Poly() {
+    // A(a1a2)B(a2b1)B(b2a1)
+    case class FaceA() extends Polygon(7) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB(cFaceB1: Value) extends Polygon(4) {
+        val sideA = Side(dA)
+        val sideB = Side(dB)
+        sideA.vertex1 matches sideB.vertex2
+        (sideA.vertex2 matches sideB.vertex1) -> cFaceB1
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB(x(0))
+    faceA.sideA matches faceB.sideA
+    faceB.sideB opposes faceB.sideB
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyCF82(dA: Value, dB: Value) extends Poly() {
+    // A(a1a2)B(a2b1)B(b2a1)
+    case class FaceA() extends Polygon(8) {
+        val sideA = Side(dA)
+        sideA.vertex1 matches sideA.vertex2
+    }
+    case class FaceB(cFaceB1: Value) extends Polygon(4) {
+        val sideA = Side(dA)
+        val sideB = Side(dB)
+        sideA.vertex1 matches sideB.vertex2
+        (sideA.vertex2 matches sideB.vertex1) -> cFaceB1
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB(x(0))
+    faceA.sideA matches faceB.sideA
+    faceB.sideB opposes faceB.sideB
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyBBB222(dA: Value, dB: Value, dC: Value) extends Poly() {
+    // A(a1b1)B(b1c1)C(c1a1)
+    case class FaceA() extends Polygon(4) {
+        val edgeA = Edge(dA)
+        val edgeB = Edge(dB)
+        edgeA.vertex matches edgeB.vertex
+    }
+    case class FaceB() extends Polygon(4) {
+        val edgeB = Edge(dB)
+        val edgeC = Edge(dC)
+        edgeB.vertex matches edgeC.vertex
+    }
+    case class FaceC() extends Polygon(4) {
+        val edgeA = Edge(dA)
+        val edgeC = Edge(dC)
+        edgeA.vertex matches edgeC.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    val faceC = new FaceC()
+    faceA.edgeA matches faceC.edgeA
+    faceA.edgeB matches faceB.edgeB
+    faceB.edgeC matches faceC.edgeC
+    (3 faces) at faceA.edgeA.vertex
+}
+
+case class UniformPolyBBB322(dA: Value, dB: Value, dC: Value) extends Poly() {
+    // A(a1b1)B(b1c1)C(c1a1)
+    case class FaceA() extends Polygon(6) {
+        val edgeA = Edge(dA)
+        val edgeB = Edge(dB)
+        edgeA.vertex matches edgeB.vertex
+    }
+    case class FaceB() extends Polygon(4) {
+        val edgeB = Edge(dB)
+        val edgeC = Edge(dC)
+        edgeB.vertex matches edgeC.vertex
+    }
+    case class FaceC() extends Polygon(4) {
+        val edgeA = Edge(dA)
+        val edgeC = Edge(dC)
+        edgeA.vertex matches edgeC.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    val faceC = new FaceC()
+    faceA.edgeA matches faceC.edgeA
+    faceA.edgeB matches faceB.edgeB
+    faceB.edgeC matches faceC.edgeC
+    (3 faces) at faceA.edgeA.vertex
+}
+
+case class UniformPolyBBB332(dA: Value, dB: Value, dC: Value) extends Poly() {
+    // A(a1b1)B(b1c1)C(c1a1)
+    case class FaceA() extends Polygon(6) {
+        val edgeA = Edge(dA)
+        val edgeB = Edge(dB)
+        edgeA.vertex matches edgeB.vertex
+    }
+    case class FaceB() extends Polygon(6) {
+        val edgeB = Edge(dB)
+        val edgeC = Edge(dC)
+        edgeB.vertex matches edgeC.vertex
+    }
+    case class FaceC() extends Polygon(4) {
+        val edgeA = Edge(dA)
+        val edgeC = Edge(dC)
+        edgeA.vertex matches edgeC.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    val faceC = new FaceC()
+    faceA.edgeA matches faceC.edgeA
+    faceA.edgeB matches faceB.edgeB
+    faceB.edgeC matches faceC.edgeC
+    (3 faces) at faceA.edgeA.vertex
+}
+
+case class UniformTilingBBB333(dA: Value, dB: Value, dC: Value) extends Poly() {
+    // A(a1b1)B(b1c1)C(c1a1)
+    case class FaceA() extends Polygon(6) {
+        val edgeA = Edge(dA)
+        val edgeB = Edge(dB)
+        edgeA.vertex matches edgeB.vertex
+    }
+    case class FaceB() extends Polygon(6) {
+        val edgeB = Edge(dB)
+        val edgeC = Edge(dC)
+        edgeB.vertex matches edgeC.vertex
+    }
+    case class FaceC() extends Polygon(6) {
+        val edgeA = Edge(dA)
+        val edgeC = Edge(dC)
+        edgeA.vertex matches edgeC.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    val faceC = new FaceC()
+    faceA.edgeA matches faceC.edgeA
+    faceA.edgeB matches faceB.edgeB
+    faceB.edgeC matches faceC.edgeC
+    (3 faces) at faceA.edgeA.vertex
+}
+
+case class UniformPolyBBB422(dA: Value, dB: Value, dC: Value) extends Poly() {
+    // A(a1b1)B(b1c1)C(c1a1)
+    case class FaceA() extends Polygon(8) {
+        val edgeA = Edge(dA)
+        val edgeB = Edge(dB)
+        edgeA.vertex matches edgeB.vertex
+    }
+    case class FaceB() extends Polygon(4) {
+        val edgeB = Edge(dB)
+        val edgeC = Edge(dC)
+        edgeB.vertex matches edgeC.vertex
+    }
+    case class FaceC() extends Polygon(4) {
+        val edgeA = Edge(dA)
+        val edgeC = Edge(dC)
+        edgeA.vertex matches edgeC.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    val faceC = new FaceC()
+    faceA.edgeA matches faceC.edgeA
+    faceA.edgeB matches faceB.edgeB
+    faceB.edgeC matches faceC.edgeC
+    (3 faces) at faceA.edgeA.vertex
+}
+
+case class UniformPolyBBB432(dA: Value, dB: Value, dC: Value) extends Poly() {
+    // A(a1b1)B(b1c1)C(c1a1)
+    case class FaceA() extends Polygon(8) {
+        val edgeA = Edge(dA)
+        val edgeB = Edge(dB)
+        edgeA.vertex matches edgeB.vertex
+    }
+    case class FaceB() extends Polygon(6) {
+        val edgeB = Edge(dB)
+        val edgeC = Edge(dC)
+        edgeB.vertex matches edgeC.vertex
+    }
+    case class FaceC() extends Polygon(4) {
+        val edgeA = Edge(dA)
+        val edgeC = Edge(dC)
+        edgeA.vertex matches edgeC.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    val faceC = new FaceC()
+    faceA.edgeA matches faceC.edgeA
+    faceA.edgeB matches faceB.edgeB
+    faceB.edgeC matches faceC.edgeC
+    (3 faces) at faceA.edgeA.vertex
+}
+
+case class UniformTilingBBB442(dA: Value, dB: Value, dC: Value) extends Poly() {
+    // A(a1b1)B(b1c1)C(c1a1)
+    case class FaceA() extends Polygon(8) {
+        val edgeA = Edge(dA)
+        val edgeB = Edge(dB)
+        edgeA.vertex matches edgeB.vertex
+    }
+    case class FaceB() extends Polygon(8) {
+        val edgeB = Edge(dB)
+        val edgeC = Edge(dC)
+        edgeB.vertex matches edgeC.vertex
+    }
+    case class FaceC() extends Polygon(4) {
+        val edgeA = Edge(dA)
+        val edgeC = Edge(dC)
+        edgeA.vertex matches edgeC.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    val faceC = new FaceC()
+    faceA.edgeA matches faceC.edgeA
+    faceA.edgeB matches faceB.edgeB
+    faceB.edgeC matches faceC.edgeC
+    (3 faces) at faceA.edgeA.vertex
+}
+
+case class UniformPolyBBB522(dA: Value, dB: Value, dC: Value) extends Poly() {
+    // A(a1b1)B(b1c1)C(c1a1)
+    case class FaceA() extends Polygon(10) {
+        val edgeA = Edge(dA)
+        val edgeB = Edge(dB)
+        edgeA.vertex matches edgeB.vertex
+    }
+    case class FaceB() extends Polygon(4) {
+        val edgeB = Edge(dB)
+        val edgeC = Edge(dC)
+        edgeB.vertex matches edgeC.vertex
+    }
+    case class FaceC() extends Polygon(4) {
+        val edgeA = Edge(dA)
+        val edgeC = Edge(dC)
+        edgeA.vertex matches edgeC.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    val faceC = new FaceC()
+    faceA.edgeA matches faceC.edgeA
+    faceA.edgeB matches faceB.edgeB
+    faceB.edgeC matches faceC.edgeC
+    (3 faces) at faceA.edgeA.vertex
+}
+
+case class UniformPolyBBB532(dA: Value, dB: Value, dC: Value) extends Poly() {
+    // A(a1b1)B(b1c1)C(c1a1)
+    case class FaceA() extends Polygon(10) {
+        val edgeA = Edge(dA)
+        val edgeB = Edge(dB)
+        edgeA.vertex matches edgeB.vertex
+    }
+    case class FaceB() extends Polygon(6) {
+        val edgeB = Edge(dB)
+        val edgeC = Edge(dC)
+        edgeB.vertex matches edgeC.vertex
+    }
+    case class FaceC() extends Polygon(4) {
+        val edgeA = Edge(dA)
+        val edgeC = Edge(dC)
+        edgeA.vertex matches edgeC.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    val faceC = new FaceC()
+    faceA.edgeA matches faceC.edgeA
+    faceA.edgeB matches faceB.edgeB
+    faceB.edgeC matches faceC.edgeC
+    (3 faces) at faceA.edgeA.vertex
+}
+
+case class UniformPolyBBB622(dA: Value, dB: Value, dC: Value) extends Poly() {
+    // A(a1b1)B(b1c1)C(c1a1)
+    case class FaceA() extends Polygon(12) {
+        val edgeA = Edge(dA)
+        val edgeB = Edge(dB)
+        edgeA.vertex matches edgeB.vertex
+    }
+    case class FaceB() extends Polygon(4) {
+        val edgeB = Edge(dB)
+        val edgeC = Edge(dC)
+        edgeB.vertex matches edgeC.vertex
+    }
+    case class FaceC() extends Polygon(4) {
+        val edgeA = Edge(dA)
+        val edgeC = Edge(dC)
+        edgeA.vertex matches edgeC.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    val faceC = new FaceC()
+    faceA.edgeA matches faceC.edgeA
+    faceA.edgeB matches faceB.edgeB
+    faceB.edgeC matches faceC.edgeC
+    (3 faces) at faceA.edgeA.vertex
+}
+
+case class UniformTilingBBB632(dA: Value, dB: Value, dC: Value) extends Poly() {
+    // A(a1b1)B(b1c1)C(c1a1)
+    case class FaceA() extends Polygon(12) {
+        val edgeA = Edge(dA)
+        val edgeB = Edge(dB)
+        edgeA.vertex matches edgeB.vertex
+    }
+    case class FaceB() extends Polygon(6) {
+        val edgeB = Edge(dB)
+        val edgeC = Edge(dC)
+        edgeB.vertex matches edgeC.vertex
+    }
+    case class FaceC() extends Polygon(4) {
+        val edgeA = Edge(dA)
+        val edgeC = Edge(dC)
+        edgeA.vertex matches edgeC.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    val faceC = new FaceC()
+    faceA.edgeA matches faceC.edgeA
+    faceA.edgeB matches faceB.edgeB
+    faceB.edgeC matches faceC.edgeC
+    (3 faces) at faceA.edgeA.vertex
+}
+
+case class UniformPolyBBB722(dA: Value, dB: Value, dC: Value) extends Poly() {
+    // A(a1b1)B(b1c1)C(c1a1)
+    case class FaceA() extends Polygon(14) {
+        val edgeA = Edge(dA)
+        val edgeB = Edge(dB)
+        edgeA.vertex matches edgeB.vertex
+    }
+    case class FaceB() extends Polygon(4) {
+        val edgeB = Edge(dB)
+        val edgeC = Edge(dC)
+        edgeB.vertex matches edgeC.vertex
+    }
+    case class FaceC() extends Polygon(4) {
+        val edgeA = Edge(dA)
+        val edgeC = Edge(dC)
+        edgeA.vertex matches edgeC.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    val faceC = new FaceC()
+    faceA.edgeA matches faceC.edgeA
+    faceA.edgeB matches faceB.edgeB
+    faceB.edgeC matches faceC.edgeC
+    (3 faces) at faceA.edgeA.vertex
+}
+
+case class UniformPolyBBB822(dA: Value, dB: Value, dC: Value) extends Poly() {
+    // A(a1b1)B(b1c1)C(c1a1)
+    case class FaceA() extends Polygon(16) {
+        val edgeA = Edge(dA)
+        val edgeB = Edge(dB)
+        edgeA.vertex matches edgeB.vertex
+    }
+    case class FaceB() extends Polygon(4) {
+        val edgeB = Edge(dB)
+        val edgeC = Edge(dC)
+        edgeB.vertex matches edgeC.vertex
+    }
+    case class FaceC() extends Polygon(4) {
+        val edgeA = Edge(dA)
+        val edgeC = Edge(dC)
+        edgeA.vertex matches edgeC.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    val faceC = new FaceC()
+    faceA.edgeA matches faceC.edgeA
+    faceA.edgeB matches faceB.edgeB
+    faceB.edgeC matches faceC.edgeC
+    (3 faces) at faceA.edgeA.vertex
+}
+
+case class UniformPolyBBC12(dA: Value, dB: Value, dC: Value) extends Poly() {
+    // A(a1b1)B(b1c1)A(c1a2)
+    case class FaceA() extends Polygon(4) {
+        val sideA = Side(dA)
+        val edgeB = Edge(dB)
+        val edgeC = Edge(dC)
+        sideA.vertex1 matches edgeB.vertex
+        sideA.vertex2 matches edgeC.vertex
+    }
+    case class FaceB() extends Polygon(4) {
+        val edgeB = Edge(dB)
+        val edgeC = Edge(dC)
+        edgeB.vertex matches edgeC.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.sideA opposes faceA.sideA
+    faceA.edgeB matches faceB.edgeB
+    faceB.edgeC matches faceA.edgeC
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyBBC13(dA: Value, dB: Value, dC: Value) extends Poly() {
+    // A(a1b1)B(b1c1)A(c1a2)
+    case class FaceA() extends Polygon(4) {
+        val sideA = Side(dA)
+        val edgeB = Edge(dB)
+        val edgeC = Edge(dC)
+        sideA.vertex1 matches edgeB.vertex
+        sideA.vertex2 matches edgeC.vertex
+    }
+    case class FaceB() extends Polygon(6) {
+        val edgeB = Edge(dB)
+        val edgeC = Edge(dC)
+        edgeB.vertex matches edgeC.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.sideA opposes faceA.sideA
+    faceA.edgeB matches faceB.edgeB
+    faceB.edgeC matches faceA.edgeC
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyBBC14(dA: Value, dB: Value, dC: Value) extends Poly() {
+    // A(a1b1)B(b1c1)A(c1a2)
+    case class FaceA() extends Polygon(4) {
+        val sideA = Side(dA)
+        val edgeB = Edge(dB)
+        val edgeC = Edge(dC)
+        sideA.vertex1 matches edgeB.vertex
+        sideA.vertex2 matches edgeC.vertex
+    }
+    case class FaceB() extends Polygon(8) {
+        val edgeB = Edge(dB)
+        val edgeC = Edge(dC)
+        edgeB.vertex matches edgeC.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.sideA opposes faceA.sideA
+    faceA.edgeB matches faceB.edgeB
+    faceB.edgeC matches faceA.edgeC
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyBBC15(dA: Value, dB: Value, dC: Value) extends Poly() {
+    // A(a1b1)B(b1c1)A(c1a2)
+    case class FaceA() extends Polygon(4) {
+        val sideA = Side(dA)
+        val edgeB = Edge(dB)
+        val edgeC = Edge(dC)
+        sideA.vertex1 matches edgeB.vertex
+        sideA.vertex2 matches edgeC.vertex
+    }
+    case class FaceB() extends Polygon(10) {
+        val edgeB = Edge(dB)
+        val edgeC = Edge(dC)
+        edgeB.vertex matches edgeC.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.sideA opposes faceA.sideA
+    faceA.edgeB matches faceB.edgeB
+    faceB.edgeC matches faceA.edgeC
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyBBC16(dA: Value, dB: Value, dC: Value) extends Poly() {
+    // A(a1b1)B(b1c1)A(c1a2)
+    case class FaceA() extends Polygon(4) {
+        val sideA = Side(dA)
+        val edgeB = Edge(dB)
+        val edgeC = Edge(dC)
+        sideA.vertex1 matches edgeB.vertex
+        sideA.vertex2 matches edgeC.vertex
+    }
+    case class FaceB() extends Polygon(12) {
+        val edgeB = Edge(dB)
+        val edgeC = Edge(dC)
+        edgeB.vertex matches edgeC.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.sideA opposes faceA.sideA
+    faceA.edgeB matches faceB.edgeB
+    faceB.edgeC matches faceA.edgeC
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyBBC17(dA: Value, dB: Value, dC: Value) extends Poly() {
+    // A(a1b1)B(b1c1)A(c1a2)
+    case class FaceA() extends Polygon(4) {
+        val sideA = Side(dA)
+        val edgeB = Edge(dB)
+        val edgeC = Edge(dC)
+        sideA.vertex1 matches edgeB.vertex
+        sideA.vertex2 matches edgeC.vertex
+    }
+    case class FaceB() extends Polygon(14) {
+        val edgeB = Edge(dB)
+        val edgeC = Edge(dC)
+        edgeB.vertex matches edgeC.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.sideA opposes faceA.sideA
+    faceA.edgeB matches faceB.edgeB
+    faceB.edgeC matches faceA.edgeC
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyBBC18(dA: Value, dB: Value, dC: Value) extends Poly() {
+    // A(a1b1)B(b1c1)A(c1a2)
+    case class FaceA() extends Polygon(4) {
+        val sideA = Side(dA)
+        val edgeB = Edge(dB)
+        val edgeC = Edge(dC)
+        sideA.vertex1 matches edgeB.vertex
+        sideA.vertex2 matches edgeC.vertex
+    }
+    case class FaceB() extends Polygon(16) {
+        val edgeB = Edge(dB)
+        val edgeC = Edge(dC)
+        edgeB.vertex matches edgeC.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.sideA opposes faceA.sideA
+    faceA.edgeB matches faceB.edgeB
+    faceB.edgeC matches faceA.edgeC
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformTilingBBC22(dA: Value, dB: Value, dC: Value, cFaceA1: Value) extends Poly() {
+    // A(a1b1)B(b1c1)A(c1a2)
+    case class FaceA() extends Polygon(8) {
+        val sideA = Side(dA)
+        val edgeB = Edge(dB)
+        val edgeC = Edge(dC)
+        (sideA.vertex1 matches edgeB.vertex) -> cFaceA1
+        sideA.vertex2 matches edgeC.vertex
+    }
+    case class FaceB() extends Polygon(4) {
+        val edgeB = Edge(dB)
+        val edgeC = Edge(dC)
+        edgeB.vertex matches edgeC.vertex
+    }
+    val faceA = new FaceA()
+    val faceB = new FaceB()
+    faceA.sideA opposes faceA.sideA
+    faceA.edgeB matches faceB.edgeB
+    faceB.edgeC matches faceA.edgeC
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformTilingACC1(dA: Value, dB: Value, dC: Value) extends Poly() {
+    // A(a1b1)A(b3c1)A(c2a2)
+    case class FaceA() extends Polygon(6) {
+        val sideA = Side(dA)
+        val edgeB3 = Edge(dB)
+        val edgeB = Edge(dB)
+        val sideC = Side(dC)
+        edgeB3.vertex matches sideC.vertex1
+        sideA.vertex1 matches edgeB.vertex
+        sideA.vertex2 matches sideC.vertex2
+    }
+    val faceA = new FaceA()
+    faceA.sideA opposes faceA.sideA
+    faceA.edgeB matches faceA.edgeB3
+    faceA.sideC opposes faceA.sideC
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformPolyCCC1(dA: Value, dB: Value, dC: Value) extends Poly() {
+    // A(a1b1)A(b2c1)A(c2a2)
+    case class FaceA() extends Polygon(3) {
+        val sideA = Side(dA)
+        val sideB = Side(dB)
+        val sideC = Side(dC)
+        sideA.vertex1 matches sideB.vertex1
+        sideA.vertex2 matches sideC.vertex2
+        sideB.vertex2 matches sideC.vertex1
+    }
+    val faceA = new FaceA()
+    faceA.sideA opposes faceA.sideA
+    faceA.sideB opposes faceA.sideB
+    faceA.sideC opposes faceA.sideC
+    (3 faces) at faceA.sideA.vertex1
+}
+
+case class UniformTilingCCC1X2(dA: Value, dB: Value, dC: Value) extends Poly() {
+    // A(a1b1)A(b2c1)A(c2a2)
+    case class FaceA() extends Polygon(3) {
+        val sideA = Side(dA)
+        val sideB = Side(dB)
+        val sideC = Side(dC)
+        sideA.vertex1 matches sideB.vertex1
+        sideA.vertex2 matches sideC.vertex2
+        sideB.vertex2 matches sideC.vertex1
+    }
+    val faceA = new FaceA()
+    faceA.sideA opposes faceA.sideA
+    faceA.sideB opposes faceA.sideB
+    faceA.sideC opposes faceA.sideC
+    (6 faces) at faceA.sideA.vertex1
+}
+
+case class UniformTilingCCC2(dA: Value, dB: Value, dC: Value, cFaceA1: Value, cFaceA2: Value) extends Poly() {
+    // A(a1b1)A(b2c1)A(c2a2)
+    case class FaceA() extends Polygon(6) {
+        val sideA = Side(dA)
+        val sideB = Side(dB)
+        val sideC = Side(dC)
+        (sideA.vertex1 matches sideB.vertex1) -> cFaceA1
+        sideA.vertex2 matches sideC.vertex2
+        (sideB.vertex2 matches sideC.vertex1) -> cFaceA2
+    }
+    val faceA = new FaceA()
+    faceA.sideA opposes faceA.sideA
+    faceA.sideB opposes faceA.sideB
+    faceA.sideC opposes faceA.sideC
+    (3 faces) at faceA.sideA.vertex1
+}
+
+object PolyWrapperSamples3 {
+    // 88 found
+    val wrappers = Vector(
+            PolyWrapper("UniformPolyAB32", 2, 0, v => UniformPolyAB32(v(0), v(1))),
+            PolyWrapper("UniformPolyAB33", 2, 0, v => UniformPolyAB33(v(0), v(1))),
+            PolyWrapper("UniformPolyAB34", 2, 0, v => UniformPolyAB34(v(0), v(1))),
+            PolyWrapper("UniformPolyAB35", 2, 0, v => UniformPolyAB35(v(0), v(1))),
+            PolyWrapper("UniformTilingAB36", 2, 0, v => UniformTilingAB36(v(0), v(1))),
+            PolyWrapper("UniformPolyAB42", 2, 0, v => UniformPolyAB42(v(0), v(1))),
+            PolyWrapper("UniformPolyAB43", 2, 0, v => UniformPolyAB43(v(0), v(1))),
+            PolyWrapper("UniformTilingAB44", 2, 0, v => UniformTilingAB44(v(0), v(1))),
+            PolyWrapper("UniformPolyAB52", 2, 0, v => UniformPolyAB52(v(0), v(1))),
+            PolyWrapper("UniformPolyAB53", 2, 0, v => UniformPolyAB53(v(0), v(1))),
+            PolyWrapper("UniformPolyAB62", 2, 0, v => UniformPolyAB62(v(0), v(1))),
+            PolyWrapper("UniformTilingAB63", 2, 0, v => UniformTilingAB63(v(0), v(1))),
+            PolyWrapper("UniformPolyAB72", 2, 0, v => UniformPolyAB72(v(0), v(1))),
+            PolyWrapper("UniformPolyAB82", 2, 0, v => UniformPolyAB82(v(0), v(1))),
+            PolyWrapper("UniformPolyAC1", 2, 0, v => UniformPolyAC1(v(0), v(1))),
+            PolyWrapper("UniformTilingAC1X2", 2, 0, v => UniformTilingAC1X2(v(0), v(1))),
+            PolyWrapper("UniformTilingAC2", 2, 1, v => UniformTilingAC2(v(0), v(1), v(2))),
+            PolyWrapper("UniformPolyAD31", 2, 0, v => UniformPolyAD31(v(0), v(1))),
+            PolyWrapper("UniformPolyAD32", 2, 0, v => UniformPolyAD32(v(0), v(1))),
+            PolyWrapper("UniformTilingAD33", 2, 1, v => UniformTilingAD33(v(0), v(1), v(2))),
+            PolyWrapper("UniformPolyAD41", 2, 0, v => UniformPolyAD41(v(0), v(1))),
+            PolyWrapper("UniformTilingAD42", 2, 1, v => UniformTilingAD42(v(0), v(1), v(2))),
+            PolyWrapper("UniformPolyAD51", 2, 0, v => UniformPolyAD51(v(0), v(1))),
+            PolyWrapper("UniformPolyAD61", 2, 0, v => UniformPolyAD61(v(0), v(1))),
+            PolyWrapper("UniformPolyAD71", 2, 0, v => UniformPolyAD71(v(0), v(1))),
+            PolyWrapper("UniformPolyAD81", 2, 0, v => UniformPolyAD81(v(0), v(1))),
+            PolyWrapper("UniformPolyCD32", 2, 0, v => UniformPolyCD32(v(0), v(1))),
+            PolyWrapper("UniformPolyCD33", 2, 0, v => UniformPolyCD33(v(0), v(1))),
+            PolyWrapper("UniformPolyCD34", 2, 0, v => UniformPolyCD34(v(0), v(1))),
+            PolyWrapper("UniformPolyCD35", 2, 0, v => UniformPolyCD35(v(0), v(1))),
+            PolyWrapper("UniformTilingCD36", 2, 1, v => UniformTilingCD36(v(0), v(1), v(2))),
+            PolyWrapper("UniformPolyCD42", 2, 0, v => UniformPolyCD42(v(0), v(1))),
+            PolyWrapper("UniformPolyCD43", 2, 0, v => UniformPolyCD43(v(0), v(1))),
+            PolyWrapper("UniformTilingCD44", 2, 1, v => UniformTilingCD44(v(0), v(1), v(2))),
+            PolyWrapper("UniformPolyCD52", 2, 0, v => UniformPolyCD52(v(0), v(1))),
+            PolyWrapper("UniformPolyCD53", 2, 0, v => UniformPolyCD53(v(0), v(1))),
+            PolyWrapper("UniformPolyCD62", 2, 0, v => UniformPolyCD62(v(0), v(1))),
+            PolyWrapper("UniformTilingCD63", 2, 1, v => UniformTilingCD63(v(0), v(1), v(2))),
+            PolyWrapper("UniformPolyCD72", 2, 0, v => UniformPolyCD72(v(0), v(1))),
+            PolyWrapper("UniformPolyCD82", 2, 0, v => UniformPolyCD82(v(0), v(1))),
+            PolyWrapper("UniformPolyAF31", 2, 0, v => UniformPolyAF31(v(0), v(1))),
+            PolyWrapper("UniformPolyAF32", 2, 0, v => UniformPolyAF32(v(0), v(1))),
+            PolyWrapper("UniformTilingAF33", 2, 1, v => UniformTilingAF33(v(0), v(1), v(2))),
+            PolyWrapper("UniformPolyAF41", 2, 0, v => UniformPolyAF41(v(0), v(1))),
+            PolyWrapper("UniformTilingAF42", 2, 1, v => UniformTilingAF42(v(0), v(1), v(2))),
+            PolyWrapper("UniformPolyAF51", 2, 0, v => UniformPolyAF51(v(0), v(1))),
+            PolyWrapper("UniformPolyAF61", 2, 0, v => UniformPolyAF61(v(0), v(1))),
+            PolyWrapper("UniformPolyAF71", 2, 0, v => UniformPolyAF71(v(0), v(1))),
+            PolyWrapper("UniformPolyAF81", 2, 0, v => UniformPolyAF81(v(0), v(1))),
+            PolyWrapper("UniformPolyCF32", 2, 0, v => UniformPolyCF32(v(0), v(1))),
+            PolyWrapper("UniformPolyCF33", 2, 0, v => UniformPolyCF33(v(0), v(1))),
+            PolyWrapper("UniformPolyCF34", 2, 0, v => UniformPolyCF34(v(0), v(1))),
+            PolyWrapper("UniformPolyCF35", 2, 0, v => UniformPolyCF35(v(0), v(1))),
+            PolyWrapper("UniformTilingCF36", 2, 1, v => UniformTilingCF36(v(0), v(1), v(2))),
+            PolyWrapper("UniformPolyCF42", 2, 0, v => UniformPolyCF42(v(0), v(1))),
+            PolyWrapper("UniformPolyCF43", 2, 0, v => UniformPolyCF43(v(0), v(1))),
+            PolyWrapper("UniformTilingCF44", 2, 1, v => UniformTilingCF44(v(0), v(1), v(2))),
+            PolyWrapper("UniformPolyCF52", 2, 0, v => UniformPolyCF52(v(0), v(1))),
+            PolyWrapper("UniformPolyCF53", 2, 0, v => UniformPolyCF53(v(0), v(1))),
+            PolyWrapper("UniformPolyCF62", 2, 0, v => UniformPolyCF62(v(0), v(1))),
+            PolyWrapper("UniformTilingCF63", 2, 1, v => UniformTilingCF63(v(0), v(1), v(2))),
+            PolyWrapper("UniformPolyCF72", 2, 0, v => UniformPolyCF72(v(0), v(1))),
+            PolyWrapper("UniformPolyCF82", 2, 0, v => UniformPolyCF82(v(0), v(1))),
+            PolyWrapper("UniformPolyBBB222", 3, 0, v => UniformPolyBBB222(v(0), v(1), v(2))),
+            PolyWrapper("UniformPolyBBB322", 3, 0, v => UniformPolyBBB322(v(0), v(1), v(2))),
+            PolyWrapper("UniformPolyBBB332", 3, 0, v => UniformPolyBBB332(v(0), v(1), v(2))),
+            PolyWrapper("UniformTilingBBB333", 3, 0, v => UniformTilingBBB333(v(0), v(1), v(2))),
+            PolyWrapper("UniformPolyBBB422", 3, 0, v => UniformPolyBBB422(v(0), v(1), v(2))),
+            PolyWrapper("UniformPolyBBB432", 3, 0, v => UniformPolyBBB432(v(0), v(1), v(2))),
+            PolyWrapper("UniformTilingBBB442", 3, 0, v => UniformTilingBBB442(v(0), v(1), v(2))),
+            PolyWrapper("UniformPolyBBB522", 3, 0, v => UniformPolyBBB522(v(0), v(1), v(2))),
+            PolyWrapper("UniformPolyBBB532", 3, 0, v => UniformPolyBBB532(v(0), v(1), v(2))),
+            PolyWrapper("UniformPolyBBB622", 3, 0, v => UniformPolyBBB622(v(0), v(1), v(2))),
+            PolyWrapper("UniformTilingBBB632", 3, 0, v => UniformTilingBBB632(v(0), v(1), v(2))),
+            PolyWrapper("UniformPolyBBB722", 3, 0, v => UniformPolyBBB722(v(0), v(1), v(2))),
+            PolyWrapper("UniformPolyBBB822", 3, 0, v => UniformPolyBBB822(v(0), v(1), v(2))),
+            PolyWrapper("UniformPolyBBC12", 3, 0, v => UniformPolyBBC12(v(0), v(1), v(2))),
+            PolyWrapper("UniformPolyBBC13", 3, 0, v => UniformPolyBBC13(v(0), v(1), v(2))),
+            PolyWrapper("UniformPolyBBC14", 3, 0, v => UniformPolyBBC14(v(0), v(1), v(2))),
+            PolyWrapper("UniformPolyBBC15", 3, 0, v => UniformPolyBBC15(v(0), v(1), v(2))),
+            PolyWrapper("UniformPolyBBC16", 3, 0, v => UniformPolyBBC16(v(0), v(1), v(2))),
+            PolyWrapper("UniformPolyBBC17", 3, 0, v => UniformPolyBBC17(v(0), v(1), v(2))),
+            PolyWrapper("UniformPolyBBC18", 3, 0, v => UniformPolyBBC18(v(0), v(1), v(2))),
+            PolyWrapper("UniformTilingBBC22", 3, 1, v => UniformTilingBBC22(v(0), v(1), v(2), v(3))),
+            PolyWrapper("UniformTilingACC1", 3, 0, v => UniformTilingACC1(v(0), v(1), v(2))),
+            PolyWrapper("UniformPolyCCC1", 3, 0, v => UniformPolyCCC1(v(0), v(1), v(2))),
+            PolyWrapper("UniformTilingCCC1X2", 3, 0, v => UniformTilingCCC1X2(v(0), v(1), v(2))),
+            PolyWrapper("UniformTilingCCC2", 3, 2, v => UniformTilingCCC2(v(0), v(1), v(2), v(3), v(4))),
+    )
+}
