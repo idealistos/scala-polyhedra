@@ -1,70 +1,11 @@
 package main
+import java.io.PrintWriter
 
-object CosineMethods {
-    def cp(a: Double, b: Double, c: Double) = {
-        assert(a > 0.0 && b > 0.0 && c >= 0)        
-        (a * a + b * b - c * c) / (2.0 * a * b)
-    } ensuring (v => math.abs(v) < 1.0)
-    
-    def cn(n: Int) = {
-        assert(n >= 3)
-        math.cos(math.Pi * (n - 2) / n)
-    }
-    
-    def cs(ca: Double, cb: Double, cc: Double) = {
-        assert(math.abs(ca) < 1.0)
-        assert(math.abs(cb) < 1.0)
-        assert(math.abs(cc) < 1.0)
-        (cc - ca * cb) / (math.sqrt(1.0 - ca * ca) * math.sqrt(1.0 - cb * cb))
-    } ensuring (v => math.abs(v) < 1.0)
-    
-}
-
-import ValueImplicits._
-import weka.core.Optimization
-import weka.core.ConjugateGradientOptimization
-
-class WekaTest extends ConjugateGradientOptimization {
-    override def objectiveFunction(x: Array[Double]) = math.pow(x(0) - 1.0, 2.0) + math.pow(x(1) - 3.0, 2.0)
-    override def evaluateGradient(x: Array[Double]) = Array(2.0 * (x(0) - 1.0), 2.0 * (x(1) - 3.0))
-    override def getRevision = ""
-}
-
-object Test1 {
-    abstract class Value {
-        def basicEvaluate(varArray: Array[Double]): Double
-        def evaluate(varArray: Array[Double]) = basicEvaluate(varArray)
-    }
-    
-    case class Constant(d: Double) extends Value {
-        override def basicEvaluate(varArray: Array[Double]) = d
-    }
-    
-    case class Variable(i: Int) extends Value {    
-        override def basicEvaluate(varArray: Array[Double]) = varArray(i)
-    }
-    
-    case class Add(v1: Value, v2: Value) extends Value {
-        override def basicEvaluate(varArray: Array[Double]) = v1.evaluate(varArray) + v2.evaluate(varArray)
-    }
-        
-    trait UsingCache extends Value {
-        var cached: Option[Double] = None
-        override def evaluate(varArray: Array[Double]) = {
-            if (cached == None) {
-                cached = Some(basicEvaluate(varArray))
-            }
-            cached.get
-        }
-    }
-
-    def main() {
-        val expr = new Variable(0) with UsingCache
-        val expr2 = new Add(expr, expr) with UsingCache
-        println(expr2.evaluate(Array(5.0)))
-    }
-    
-}
+import main.poly.PolyWrapperSamples
+import main.scheme.Instantiator
+import main.scheme.Uniform3DPolyhedraExplorer
+import main.poly.PolyWrapper
+import main.poly.PolyWrapperSamples4
 
 object Main {
  
@@ -76,30 +17,47 @@ object Main {
         result
     }
     
-    def testWeka() {
-        val test = new WekaTest
-        var x = Array(0.0, 0.0)
-        val constraints = for (i <- Array.range(0, 2)) yield Array(Double.NaN, Double.NaN)
-        x = test.findArgmin(x, constraints)
-        while (x == null) {
-            x = test.getVarbValues()
-            x = test.findArgmin(x, null)
+    def generateAndSaveSVG(wrappers: Seq[PolyWrapper], filename: String) {
+        val svgParts = Instantiator.generateSVG(wrappers)
+        new PrintWriter(filename) {
+            for ((polyClassName, svg) <- svgParts) {
+                write(s"$polyClassName<br/>\n$svg<br>\n")
+            }
+            close()
         }
-        val minFunction = test.getMinFunction();
-        println(minFunction)
     }
-
-    def main(args: Array[String]): Unit = {
+    
+    def main(args: Array[String]) {
+        // testWeka();
         // val x = new NCube(3, 1.0)
         // val poly = new TruncatedRhombicosidodecahedron(0.8, 0.8, 0.1, 0.2)
         // val poly = new Cuboctahedron(1.0)
         // Test1.main()
-        val poly = new RhombicDodecahedron(1.0)
+        // val poly = new RhombicDodecahedron(1.0)
         // val poly = new Tetrahedron(1.0)
-        // val poly = new SnubCube(1.0, 1.0, 1.0)
-        val polyData = PolyConverter3D(PolyGeometry(poly))
-        print(PolyDrawing.drawFacesAndLines(PolyDrawingInfo(polyData)))
-        println()
+        // val poly = new Cube(1.0)
+        // val poly = new SnubCube(1.0, 0.7, 0.7)
+        // val poly = new SnubDodecahedron(1.0, 0.9, 0.8)
+        // val poly = new RhombicDodecahedron(1.0)
+        // val poly = new Icosahedron(1.0)
+        // val poly = new IsoscelesTetrahedron(1.0, 2.0)
+        // val poly = new TruncatedIcosidodecahedron(1.0, 0.7, 0.7)
+        // val poly = new NSidedPyramid(5, 1.0, 5.0)
+        // val poly = new CutHypercube(1.0)
+        // val poly = new HyperTetrahedron(1.0)
+        // val poly = new HyperCube(1.0)
+        // val poly = new HyperPyramidOnCube(1.0, 1.0)
+        // val poly = new HyperDodecahedron(1.0)
+        // val poly = new RhombicDodecahedron2(1.0)
+        // val poly = new FaceAP(1.0, 0.8)
+        // val poly = new UniformTilingWith2Faces3EdgesScheme1Factors10(0.7, 0.8, 1.0) - cannot solve octagon
+//        val poly = new UniformTilingWith1Face3EdgesScheme2Factors3(0.6, 0.8, 1.1, -0.2, -0.3)
+////        val poly = new PrismOnIsoscelesTetrahedron(0.8, 0.9, 1.0)
+//        val polyData = PolyData(PolyGeometry(poly))
+//        print(PolyDrawing.drawFacesAndLines(PolyDrawingInfo(polyData)))
+//        println()
+//        Uniform3DPolyhedraExplorer.printScalaCode
+        generateAndSaveSVG(PolyWrapperSamples4.wrappers, "poly3D-4angles.svg_parts") 
     }
     
 }
