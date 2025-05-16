@@ -1,7 +1,8 @@
 # scala-polyhedra
+
 Scala code for generating convex multidimensional polyhedra exportable to SVG.
 
-Examples:
+Examples (HTML with SVG):
 
 - Uniform 3D polyhedra and tilings:
   - [1](https://idealistos.github.io/scala-polyhedra/UniformPoly3D-1angles.html)
